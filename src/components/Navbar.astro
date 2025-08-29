@@ -2,12 +2,12 @@
 const { active = "home" } = Astro.props;
 ---
 
-<nav class="w-screen fixed bg-white z-10 shadow-sm">
+<nav class="w-screen fixed bg-white z-50 shadow-sm">
   <div class="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-4">
     
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3">
-      <img src="/public/img/icon.png" class="w-16" alt="LuciTara Logo" />
+      <img src="/img/icon.png" class="w-16" alt="LuciTara Logo" />
       <div class="leading-none">
         <div class="text-[28px] font-semibold text-[var(--blue)] leading-[1.05]">LuciTara</div>
         <div class="flex items-end gap-2 -mt-1">
@@ -32,7 +32,7 @@ const { active = "home" } = Astro.props;
       <a href="#inicio" class="py-2 hover:text-[var(--green)] transition">Inicio</a>
       <a href="#mision" class="py-2 hover:text-[var(--green)] transition">Misión</a>
       <a href="#ayuda" class="py-2 hover:text-[var(--green)] transition">Ayuda</a>
-      <a href="/contact" class="py-2 hover:text-[var(--green)] transition">Impacto</a>
+      <a href="#impacto" class="py-2 hover:text-[var(--green)] transition">Impacto</a>
     </div>
 
     <!-- Buttons Desktop -->

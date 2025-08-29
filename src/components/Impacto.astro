@@ -4,63 +4,74 @@ const historias = [
     titulo: "Luna encontró un hogar",
     descripcion:
       "Luna vivía en la calle, enferma y sin esperanza. Hoy, gracias a la adopción, tiene una familia que la ama.",
-    imagen: "https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg",
+    imagen: "/img/impacto1.jpeg",
     link: "/historias/luna",
   },
   {
     titulo: "Rescate en comunidad",
     descripcion:
       "Una colonia se unió para rescatar y esterilizar a más de 30 gatos, demostrando que la unión transforma vidas.",
-    imagen: "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg",
+    imagen: "/img/impacto2.jpeg",
     link: "/historias/rescate-comunidad",
   },
   {
     titulo: "Deja una huella",
     descripcion:
       "Cada acto de bondad genera un impacto duradero. Tu ayuda es la chispa que inspira a otros a cambiar.",
-    imagen: "https://images.pexels.com/photos/30642736/pexels-photo-30642736.jpeg",
+    imagen: "/img/impacto3.jpeg",
     link: "/historias/huella",
   },
 ];
 ---
 
-<section class="w-full bg-[var(--cream)] py-16 px-4 sm:px-6 lg:px-8">
+<section
+  id="impacto"
+  class="w-full min-h-screen flex items-center justify-center bg-[var(--cream)] py-16 px-4 sm:px-6 lg:px-8"
+>
   <div class="max-w-6xl mx-auto flex flex-col gap-12">
-
     <!-- IMPORTANCIA DE TOMAR ACCIONES -->
     <div class="text-center flex flex-col items-center gap-4 sm:gap-6">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--blue)]">
         La Importancia de Tomar Acción
       </h2>
-      <p class="text-base sm:text-lg md:text-xl text-[var(--blue)]/80 max-w-3xl">
-        Cada decisión que tomamos puede marcar la diferencia en la vida de los animales. Adoptar, rescatar, apoyar o simplemente alzar la voz son pasos que construyen un mundo más compasivo y justo para ellos.
+      <p
+        class="text-base sm:text-lg md:text-xl text-[var(--blue)]/80 max-w-3xl"
+      >
+        Cada decisión que tomamos puede marcar la diferencia en la vida de los
+        animales. Adoptar, rescatar, apoyar o simplemente alzar la voz son pasos
+        que construyen un mundo más compasivo y justo para ellos.
       </p>
     </div>
 
     <!-- HISTORIAS DE IMPACTO -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {historias.map((historia) => (
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-300">
-          <img
-            src={historia.imagen}
-            alt={historia.titulo}
-            class="h-48 sm:h-56 md:h-48 w-full object-cover"
-          />
-          <div class="p-6 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-[var(--green)] mb-2">{historia.titulo}</h3>
-              <p class="text-[var(--blue)]/80 mb-4 text-sm sm:text-base">{historia.descripcion}</p>
+      {
+        historias.map((historia) => (
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-300">
+            <img
+              src={historia.imagen}
+              alt={historia.titulo}
+              class="h-48 sm:h-56 md:h-48 w-full object-cover"
+            />
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-[var(--green)] mb-2">
+                  {historia.titulo}
+                </h3>
+                <p class="text-[var(--blue)]/80 mb-4 text-sm sm:text-base">
+                  {historia.descripcion}
+                </p>
+              </div>
+              <a
+                href={historia.link}
+                class="mt-2 inline-block bg-[var(--green)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--light-green)] transition"
+              >
+                Leer historia
+              </a>
             </div>
-            <a
-              href={historia.link}
-              class="mt-2 inline-block bg-[var(--green)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--light-green)] transition"
-            >
-              Leer historia
-            </a>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
-
   </div>
 </section>
